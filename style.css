@@ -1,0 +1,125 @@
+/* 1. VARIABLES: change colors here and the whole site updates */
+:root {
+  --primary: #e4572e;
+  --dark: #222;
+  --text: #555;
+  --light: #fff;
+  --bg-alt: #fdf4ef;
+  --radius: 12px;
+  --shadow: 0 4px 16px rgba(0,0,0,.08);
+}
+
+/* 2. RESET + BASE */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 70px; }
+body { font-family: 'Segoe UI', Arial, sans-serif; color: var(--text); line-height: 1.6; }
+img { max-width: 100%; display: block; border-radius: var(--radius); }
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; }
+h1, h2, h3, h4 { color: var(--dark); line-height: 1.2; }
+h2 { font-size: 2rem; margin-bottom: 1rem; }
+
+/* 3. HELPERS */
+.container { width: 90%; max-width: 1100px; margin: 0 auto; }
+.section { padding: 70px 0; }
+.alt { background: var(--bg-alt); }
+.center { text-align: center; }
+.sub { text-align: center; margin-bottom: 2rem; }
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+
+/* 4. BUTTONS */
+.btn { display: inline-block; background: var(--primary); color: #fff; padding: 12px 26px;
+  border: 2px solid var(--primary); border-radius: 50px; font-weight: 600; cursor: pointer; font-size: 1rem; transition: .3s; }
+.btn:hover { transform: translateY(-2px); opacity: .9; }
+.btn-outline { background: transparent; color: var(--primary); }
+.btn-light { background: #fff; color: var(--primary); border-color: #fff; }
+.btn-small { padding: 8px 18px; }
+.btn-group { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 1.5rem; }
+
+/* 5. HEADER */
+.header { position: sticky; top: 0; z-index: 100; background: #fff; box-shadow: var(--shadow); }
+.nav-wrap { display: flex; justify-content: space-between; align-items: center; height: 70px; }
+.logo { font-size: 1.5rem; font-weight: 800; color: var(--dark); }
+.logo span { color: var(--primary); }
+nav ul { display: flex; gap: 26px; align-items: center; }
+nav a:not(.btn):hover { color: var(--primary); }
+.menu-btn { display: none; background: none; border: none; font-size: 1.8rem; cursor: pointer; }
+
+/* 6. HERO */
+.hero { background: var(--bg-alt); padding: 80px 0; }
+.hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+.hero h1 { font-size: 3rem; margin: .5rem 0 1rem; }
+.tag { color: var(--primary); font-weight: 700; text-transform: uppercase; font-size: .85rem; letter-spacing: 1px; }
+.lead { font-size: 1.1rem; }
+
+/* 7. ABOUT */
+.stats { display: flex; gap: 30px; margin-top: 1.5rem; }
+.stats strong { display: block; font-size: 1.8rem; color: var(--primary); }
+.stats span { font-size: .9rem; }
+
+/* 8. MENU CARDS */
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.card { background: #fff; border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; transition: .3s; }
+.card:hover { transform: translateY(-6px); }
+.card img { border-radius: 0; width: 100%; }
+.card-body { padding: 18px; }
+.price { display: inline-block; margin-top: 8px; font-weight: 700; color: var(--primary); font-size: 1.2rem; }
+
+/* 9. OFFER */
+.offer { background: var(--primary); color: #fff; text-align: center; padding: 60px 0; }
+.offer h2 { color: #fff; }
+.offer p { margin-bottom: 1.2rem; }
+
+/* 10. GALLERY */
+.gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 2rem; }
+.gallery img { width: 100%; height: 100%; object-fit: cover; transition: .3s; }
+.gallery img:hover { transform: scale(1.04); }
+
+/* 11. WHY CHOOSE US */
+.features { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 2rem; }
+.feature { background: #fff; padding: 28px 18px; border-radius: var(--radius); text-align: center; box-shadow: var(--shadow); }
+.feature span { font-size: 2.2rem; }
+
+/* 12. REVIEWS */
+.reviews { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 2rem; }
+.review { background: var(--bg-alt); padding: 24px; border-radius: var(--radius); }
+.stars { color: #f5a623; font-size: 1.2rem; }
+.review cite { display: block; margin-top: 10px; font-weight: 600; color: var(--dark); }
+
+/* 13. CONTACT */
+.two-col { margin-top: 1rem; align-items: start; }
+.info p { margin-bottom: 10px; }
+.info iframe { width: 100%; border: 0; border-radius: var(--radius); margin-top: 10px; }
+form label { display: block; font-weight: 600; margin: 12px 0 4px; }
+form input, form textarea { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; font: inherit; }
+form input:focus, form textarea:focus { outline: 2px solid var(--primary); }
+form .btn { margin-top: 14px; }
+
+/* 14. FOOTER */
+.footer { background: var(--dark); color: #ccc; padding-top: 50px; }
+.footer .logo { color: #fff; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 30px; }
+.footer h4 { color: #fff; margin-bottom: 10px; }
+.footer-grid a:not(.logo) { display: block; margin-bottom: 6px; }
+.footer a:hover { color: var(--primary); }
+.copy { text-align: center; padding: 20px 0; margin-top: 30px; border-top: 1px solid #444; font-size: .9rem; }
+
+/* 15. WHATSAPP FLOATING BUTTON */
+.whatsapp { position: fixed; right: 18px; bottom: 18px; background: #25d366; color: #fff;
+  padding: 12px 18px; border-radius: 50px; font-weight: 700; box-shadow: var(--shadow); z-index: 99; }
+
+/* 16. RESPONSIVE: tablet and mobile */
+@media (max-width: 900px) {
+  .cards, .reviews { grid-template-columns: repeat(2, 1fr); }
+  .features { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .menu-btn { display: block; }
+  nav { display: none; position: absolute; top: 70px; left: 0; width: 100%; background: #fff; padding: 20px; box-shadow: var(--shadow); }
+  nav.open { display: block; }
+  nav ul { flex-direction: column; gap: 16px; }
+  .hero-grid, .two-col, .footer-grid { grid-template-columns: 1fr; }
+  .hero h1 { font-size: 2.2rem; }
+  .cards, .reviews, .gallery, .features { grid-template-columns: 1fr; }
+  .stats { flex-wrap: wrap; }
+}
